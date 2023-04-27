@@ -1,0 +1,60 @@
+h1 {
+	text-align: center;
+}
+
+.converter {
+	margin: 50px auto;
+	width: 100%;
+	text-align: center;
+}
+
+label, select, input, button {
+	display: inline-block;
+	margin: 10px;
+    font-size: 30px;
+}
+
+
+#inputUnit_area, #outputUnit_area,#outputUnit_volume ,#inputUnit_volume, #inputUnit_weight , #outputUnit_weight, #inputUnit_time , #outputUnit_time {
+	width: 140px;
+}
+
+
+
+input[type="number"] {
+	width: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 10px;
+    border-radius: 10px;
+    border: 1px solid #222;
+}
+
+select {
+	width: 75px;
+	background-color: #a3a3a3;
+	color: #fff;
+    padding: 10px 12px;
+    border-radius: 20px;
+    border: none;
+	
+}
+
+button {
+	padding: 10px;
+	background-color: #3498db;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+    border: none;
+}
+strong{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#inputUnit{
+	margin-left: 5px;
+}

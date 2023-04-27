@@ -1,0 +1,427 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="style.css">
+    
+    <!--====== Title ======-->
+    <title>IFSC Code Finder Portal | Home</title>
+    
+    <!--====== Slick CSS ======-->
+    <link rel="stylesheet" href="assets/css/slick.css">
+        
+    <!--====== Font Awesome CSS ======-->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="assets/css/LineIcons.css">
+        
+    <!--====== Animate CSS ======-->
+    <link rel="stylesheet" href="assets/css/animate.css">
+        
+    <!--====== Magnific Popup CSS ======-->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="assets/css/default.css">
+    
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+</head>
+
+<body>
+    <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+   
+   
+    <!--====== PRELOADER PART START ======-->
+
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--====== PRELOADER PART ENDS ======-->
+    
+    <!--====== HEADER PART START ======-->
+    
+    <header class="header-area">
+        <div class="navbar-area headroom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                           <h3 style="color: red;padding-right: 50px;">Unit Converter</h3>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav m-auto">
+                                   
+                                   
+                        </nav> <!-- navbar -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- navbar area -->
+        
+        <div id="home" class="header-hero bg_cover d-lg-flex align-items-center mb-5" style="background-image: url(assets/images/header-hero.jpg)">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="header-hero-content">
+                            <h1 class="hero-title wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s"><b>Convert</b> <span>Your</span> Number <b>into require Unit</b></h1>
+                           
+                        <div class=" converter col-lg-8 align-items-center mt-4">
+                            <button  id="Length-btn"  class="btn btn btn-outline-primary ml-2 ">Length</button>
+                            <button   id="Temprature-btn" class="btn btn btn-outline-primary ml-2">Temprature</button>
+                            <button  id="Area-btn" class="btn btn btn-outline-primary ml-2">Area</button>
+                            <button  id="Volume-btn" class="btn btn btn-outline-primary ml-2">Volume</button>
+                            <button  id="Weight-btn"  class="btn btn btn-outline-primary ml-2">Weight</button>
+                            <button id="Time-btn" class="btn btn btn-outline-primary ml-2">Time</button>
+                        </div>
+                        
+
+                        <!-- for Length -->
+
+                        <div id="length" class="converter col-lg-8 ">
+                            <h2 >For Length</h2> <hr>
+                            <label  for="input"><strong>Input:</strong></label>
+                            <input type="number" id="input">
+                            <select id="inputUnit">
+                                <option value="cm">cm</option>
+                                <option value="m">m</option>
+                                <option value="km">km</option>
+                                <option value="in">in</option>
+                                <option value="ft">ft</option>
+                                <option value="yd">yd</option>
+                                <option value="mi">mi</option>
+                            </select>
+
+                                <strong >To</strong>
+                            <select id="outputUnit">
+                                <option value="cm">cm</option>
+                                <option value="m"> m </option>
+                                <option value="km">km</option>
+                                <option value="in">in</option>
+                                <option value="ft">ft</option>
+                                <option value="yd">yd</option>
+                                <option value="mi">mi</option>
+                            </select>
+                            <label for="output">Output:</label>
+                            <input type="number" id="output" disabled>
+                            <button class="btn btn-primary mt-4" onclick="convert()">Convert</button>
+                        </div>
+
+                          
+                            <!-- for Temprature -->
+
+                            <div id="Temprature" class="converter col-lg-8 " style="display: none;">
+                                <h2 >For Temprature</h2> <hr>
+                                <label  for="input"><strong>Input:</strong></label>
+                                <input type="number" id="temp_input">
+                                <select id="temp_inputUnit">
+                                    <option value="cel">celsius</option>
+                                    <option value="kel">kelvin</option>
+                                    <option value="f">faherenhite</option>
+                                   
+                                </select>
+
+                                    <strong >To</strong>
+                                <select id="temp_outputUnit">
+                                    <option value="cel">celsius</option>
+                                    <option value="kel">kelvin</option>
+                                    <option value="f">faherenhite</option>
+                                    
+                                </select>
+                                <label for="output">Output:</label>
+                                <input type="number" id="temp_output" disabled>
+                                <button class="btn btn-primary mt-4" onclick="convert_temp()">Convert</button>
+                            </div>
+
+                            <!-- for Area -->
+
+                            <div  id="area" class="converter col-lg-10 " style="display: none;">
+                                <h2 >For Area</h2> <hr>
+                                <label  for="input"><strong>Input:</strong></label>
+                                <input type="number" id="input_area">
+                                <select id="inputUnit_area">
+                                    <option value="sqm">square meter</option>
+                                    <option value="sqkm">square Kelometer</option>
+                                    <option value="sqcm">square centimeter</option>
+                                    <option value="sqmm">square milimeter</option>
+                                    <option value="sqmicm">square micrometer</option>
+                                    <option value="hec">hectare</option>
+                                    <option value="sqmile">square mile</option>
+                                    <option value="sqyd">square yard</option>
+                                    <option value="sqft">square foot</option>
+                                    <option value="sqin">square inch</option>
+                                    <option value="acre">square area</option>
+                                </select>
+
+                                    <strong >To</strong>
+                                <select id="outputUnit_area">
+                                    <option value="sqm">square meter</option>
+                                    <option value="sqkm">square Kelometer</option>
+                                    <option value="sqcm">square centimeter</option>
+                                    <option value="sqmm">square milimeter</option>
+                                    <option value="sqmicm">square micrometer</option>
+                                    <option value="hec">hectare</option>
+                                    <option value="sqmile">square mile</option>
+                                    <option value="sqyd">square yard</option>
+                                    <option value="sqft">square foot</option>
+                                    <option value="sqin">square inch</option>
+                                    <option value="acre">acre</option>
+                                </select>
+                                <label for="output">Output:</label>
+                                <input type="number" id="output_area" disabled>
+                                <button class="btn btn-primary mt-4" onclick="convert_area()">Convert</button>
+                            </div>
+
+                            <!-- for Volume -->
+
+                            <div  id="Volume" class="converter col-lg-10 " style="display: none;">
+                                <h2 >For Volume</h2> <hr>
+                                <label  for="input"><strong>Input:</strong></label>
+                                <input type="number" id="input_volume">
+                                <select id="inputUnit_volume">
+                                    <option value="cubm">Cubic Meter</option>
+                                    <option value="cubkm">Cubic Kilometer</option>
+                                    <option value="cubcm">Cubic Centimter</option>
+                                    <option value="cubmm">Cubic Millimeter</option>
+                                    <option value="lit">Liter </option>
+                                    <option value="mlit">Milliliter</option>
+                                   
+                                </select>
+
+                                    <strong >To</strong>
+                                <select id="outputUnit_volume">
+                                    <option value="cubm">Cubic Meter</option>
+                                    <option value="cubkm">Cubic Kilometer</option>
+                                    <option value="cubcm">Cubic Centimter</option>
+                                    <option value="cubmm">Cubic Millimeter</option>
+                                    <option value="lit">Liter </option>
+                                    <option value="mlit">Milliliter</option>
+                                </select>
+                                <label for="output">Output:</label>
+                                <input type="number" id="output_volume" disabled>
+                                <button class="btn btn-primary mt-4" onclick="convert_volume()">Convert</button>
+                            </div>
+
+                            <!-- for Weight -->
+
+
+                            
+                            <div  id="Weight" class="converter col-lg-10 " style="display: none;">
+                                <h2 >For weight</h2> <hr>
+                                <label  for="input"><strong>Input:</strong></label>
+                                <input type="number" id="input_weight">
+                                <select id="inputUnit_weight">
+                                    <<option value="kg">Kilogram</option>
+                                    <option value="gm">Gram</option>
+                                    <option value="miligm">Milligram</option>
+                                    <option value="mt">Metric Ton</option>
+                                    <option value="lt">Long Ton</option>
+                                    <option value="st">Short Ton</option>
+                                    <option value="p">Pound</option>
+                                    <option value="oun">Ounce</option>
+                                    <option value="car">Carrat</option>
+                                    <option value="amu">Atomic Mass Unit</option>
+                                   
+                                </select>
+
+                                    <strong >To</strong>
+                                <select id="outputUnit_weight">
+                                    <option value="kg">Kilogram</option>
+                                    <option value="gm">Gram</option>
+                                    <option value="miligm">Milligram</option>
+                                    <option value="mt">Metric Ton</option>
+                                    <option value="lt">Long Ton</option>
+                                    <option value="st">Short Ton</option>
+                                    <option value="p">Pound</option>
+                                    <option value="oun">Ounce</option>
+                                    <option value="car">Carrat</option>
+                                    <option value="amu">Atomic Mass Unit</option>
+                                </select>
+                                <label for="output">Output:</label>
+                                <input type="number" id="output_weight" disabled>
+                                <button class="btn btn-primary mt-4" onclick="convert_weight()">Convert</button>
+                            </div>
+
+                            <!-- <div  id="Weight" class="converter col-lg-10 " style="display: none;">
+                                <h2 >For Weight</h2> <hr>
+                                <label  for="input"><strong>Input:</strong></label>
+                                <input type="number" id="input_width">
+                                <select id="inputUnit_width">
+                                    <option value="kg">Kilogram</option>
+                                    <option value="gm">Gram</option>
+                                    <option value="miligm">Milligram</option>
+                                    <option value="mt">Metric Ton</option>
+                                    <option value="lt">Long Ton</option>
+                                    <option value="st">Short Ton</option>
+                                    <option value="p">Pound</option>
+                                    <option value="oun">Ounce</option>
+                                    <option value="car">Carrat</option>
+                                    <option value="amu">Atomic Mass Unit</option>
+                                </select>
+
+                                    <strong >To</strong>
+                                <select id="outputUnit_width">
+                                    <option value="kg">Kilogram</option>
+                                    <option value="gm">Gram</option>
+                                    <option value="miligm">Milligram</option>
+                                    <option value="mt">Metric Ton</option>
+                                    <option value="lt">Long Ton</option>
+                                    <option value="st">Short Ton</option>
+                                    <option value="p">Pound</option>
+                                    <option value="oun">Ounce</option>
+                                    <option value="car">Carrat</option>
+                                    <option value="amu">Atomic Mass Unit</option>
+                                </select>
+                                <label for="output">Output:</label>
+                                <input type="number" id="output_width" disabled>
+                                <button class="btn btn-primary mt-4" onclick="convert_width()">Convert</button>
+                            </div> -->
+
+
+                            <!-- for time -->
+
+
+                            <div  id="Time" class="converter col-lg-10 " style="display: none;">
+                                <h2 >For Time</h2> <hr>
+                                <label  for="input"><strong>Input:</strong></label>
+                                <input type="number" id="input_time">
+                                <select id="inputUnit_time">
+                                    <option value="sec">Second</option>
+                                    <option value="milsec">MIllisecond</option>
+                                    <option value="micsec">Microsecond</option>
+                                    <option value="nansec">Nanosecond</option>
+                                    <option value="picsec">Picosecond</option>
+                                    <option value="min">Minute</option>
+                                    <option value="hr">Hour</option>
+                                    <option value="dy">Day</option>
+                                    <option value="wk">Week</option>
+                                    <option value="mt">Month</option>
+                                    <option value="yr">Year</option>
+                                </select>
+
+                                    <strong >To</strong>
+                                <select id="outputUnit_time">
+                                    <option value="sec">Second</option>
+                                    <option value="milsec">MIllisecond</option>
+                                    <option value="micsec">Microsecond</option>
+                                    <option value="nansec">Nanosecond</option>
+                                    <option value="picsec">Picosecond</option>
+                                    <option value="min">Minute</option>
+                                    <option value="hr">Hour</option>
+                                    <option value="dy">Day</option>
+                                    <option value="wk">Week</option>
+                                    <option value="mt">Month</option>
+                                    <option value="yr">Year</option>
+                                </select>
+                                <label for="output">Output:</label>
+                                <input type="number" id="output_time" disabled>
+                                <button class="btn btn-primary mt-4" onclick="convert_time()">Convert</button>
+                            </div>
+
+                        </div> <!-- header hero content -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+            <!-- header hero image -->
+        </div> <!-- header hero -->
+    </header>
+    
+ 
+    <!--====== FOOTER PART START ======-->
+    
+    <footer id="footer" class="footer-area bg_cover" style="background-image: url(assets/images/footer-bg.jpg)">
+        <div class="container">
+            <div class="footer-copyright text-center">
+                <p class="text">© < IFSC Code finder Portal</p>
+            </div>
+        </div> <!-- container -->
+    </footer>
+    
+    <!--====== FOOTER PART ENDS ======-->
+    
+    <!--====== BACK TOP TOP PART START ======-->
+
+    <a href="#" class="back-to-top"><i class="lni-chevron-up"></i></a>
+
+    <!--====== BACK TOP TOP PART ENDS ======-->  
+
+
+
+
+    <!--====== Jquery js ======-->
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
+    
+    <!--====== Bootstrap js ======-->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    
+    <!--====== Slick js ======-->
+    <script src="assets/js/slick.min.js"></script>
+    
+    <!--====== Isotope js ======-->
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    
+    <!--====== Counter Up js ======-->
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    
+    <!--====== Circles js ======-->
+    <script src="assets/js/circles.min.js"></script>
+    
+    <!--====== Appear js ======-->
+    <script src="assets/js/jquery.appear.min.js"></script>
+    
+    <!--====== WOW js ======-->
+    <script src="assets/js/wow.min.js"></script>
+    
+    <!--====== Headroom js ======-->
+    <script src="assets/js/headroom.min.js"></script>
+    
+    <!--====== Jquery Nav js ======-->
+    <script src="assets/js/jquery.nav.js"></script>
+    
+    <!--====== Scroll It js ======-->
+    <script src="assets/js/scrollIt.min.js"></script>
+    
+    <!--====== Magnific Popup js ======-->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    
+    <!--====== Main js ======-->
+    <script src="assets/js/main.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
