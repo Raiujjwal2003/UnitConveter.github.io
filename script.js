@@ -137,8 +137,8 @@ function convert() {
 	else if (inputUnit === "km" && outputUnit === "mi") {
 		output.value = input /   1.609	;
 	}
-	else if (inputUnit === "in" && outputUnit === "mi") {
-		output.value = input /   1.609	;
+	else if (inputUnit === "ft" && outputUnit === "cm") {
+		output.value = input /   30.48;
 	}
 	else {
 		output.value = input;
